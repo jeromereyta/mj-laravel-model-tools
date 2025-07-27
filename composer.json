@@ -1,0 +1,15 @@
+{
+    "name": "mj/laravel-model-tools",
+    "autoload": {
+        "psr-4": {
+            "ModelTools\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ModelTools\\ModelToolsServiceProvider"
+            ]
+        }
+    }
+}
