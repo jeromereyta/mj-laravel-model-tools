@@ -1,5 +1,5 @@
 {
-    "name": "mj/laravel-model-tools",
+    "name": "jeromereyta/laravel-model-tools",
     "autoload": {
         "psr-4": {
             "ModelTools\\": "src/"
