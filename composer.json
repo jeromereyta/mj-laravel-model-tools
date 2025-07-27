@@ -1,5 +1,6 @@
 {
     "name": "jeromereyta/laravel-model-tools",
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "ModelTools\\": "src/"
