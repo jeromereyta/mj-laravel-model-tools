@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace ModelTools;
 
+use Illuminate\Bus\BusServiceProvider;
+use Illuminate\Contracts\Bus\Dispatcher;
 use Illuminate\Support\ServiceProvider;
 
 class ModelToolsServiceProvider extends ServiceProvider
@@ -17,6 +19,10 @@ class ModelToolsServiceProvider extends ServiceProvider
 
     public function register(): void
     {
+        if (! $this->app->bound(Dispatcher::class)) {
+            $this->app->register(BusServiceProvider::class);
+        }
+
         $this->mergeConfigFrom(
             __DIR__ . '/../config/model-tools.php',
             'model-tools'
